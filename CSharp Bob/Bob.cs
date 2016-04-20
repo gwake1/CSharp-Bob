@@ -7,6 +7,9 @@ namespace CSharp_Bob
 {
     public class Bob
     {
-
+        public static string Hey(string msg)
+        {
+            return "Whatever.";
+        }
     }
 }
