@@ -64,14 +64,12 @@ namespace CSharp_Bob
             Assert.That(Bob.Hey("1, 2, 3"), Is.EqualTo("Whatever."));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Question_with_only_numbers()
         {
             Assert.That(Bob.Hey("4?"), Is.EqualTo("Sure."));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Shouting_with_special_characters()
         {
