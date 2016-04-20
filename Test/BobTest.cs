@@ -58,7 +58,6 @@ namespace CSharp_Bob
             Assert.That(Bob.Hey("1, 2, 3 GO!"), Is.EqualTo("Whoa, chill out!"));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Only_numbers()
         {
