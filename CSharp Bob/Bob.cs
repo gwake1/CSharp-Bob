@@ -13,6 +13,10 @@ namespace CSharp_Bob
             {
                 return "Whoa, chill out!";
             }
+            else if (msg.Contains("?"))
+            {
+                return "Sure.";
+            }
             return "Whatever.";
         }
     }

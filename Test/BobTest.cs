@@ -16,7 +16,6 @@ namespace CSharp_Bob
             Assert.That(Bob.Hey("WATCH OUT!"), Is.EqualTo("Whoa, chill out!"));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Asking_a_question()
         {
