@@ -22,7 +22,6 @@ namespace CSharp_Bob
             Assert.That(Bob.Hey("Does this cryogenic chamber make me look fat?"), Is.EqualTo("Sure."));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Asking_a_question_with_a_trailing_space()
         {
