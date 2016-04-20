@@ -21,11 +21,37 @@ namespace CSharp_Bob
                     return "Whoa, chill out!";
                 }
             }
-            else if (msg.Contains("?")  || hasNumber)
+            else if (msg.Contains("?"))
             {
-                return "Sure.";
+                if (hasNumber)
+                {
+                    return "Sure.";
+                }
+                else if(ForceFulQuestion(msg))
+                {
+                    return "Whoa, chill out!";
+                }
+                else
+                {
+                    return "Sure.";
+                }
+                
             }
             return "Whatever.";
+        }
+        public static bool ForceFulQuestion(string msg)
+        {
+            string[] words = msg.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            string jumble = string.Concat(words);
+            bool hasLower = jumble.Where(c => char.IsLower(c)).Any();
+            if (hasLower)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

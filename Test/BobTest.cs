@@ -40,14 +40,12 @@ namespace CSharp_Bob
             Assert.That(Bob.Hey("Let's go make out behind the gym!"), Is.EqualTo("Whatever."));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Using_acronyms_in_regular_search()
         {
             Assert.That(Bob.Hey("It's OK if you don't want to go to the DMV."), Is.EqualTo("Whatever."));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Forceful_questions()
         {
