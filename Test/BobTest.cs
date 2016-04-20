@@ -28,7 +28,6 @@ namespace CSharp_Bob
             Assert.That(Bob.Hey("Do I like my  spacebar  too much?  "), Is.EqualTo("Sure."));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Asking_a_numeric_question()
         {

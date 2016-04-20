@@ -9,11 +9,12 @@ namespace CSharp_Bob
     {
         public static string Hey(string msg)
         {
+            bool hasNumber = msg.Where(c => char.IsDigit(c)).Any();
             if (msg.Contains("!"))
             {
                 return "Whoa, chill out!";
             }
-            else if (msg.Contains("?"))
+            else if (msg.Contains("?")  || hasNumber)
             {
                 return "Sure.";
             }
