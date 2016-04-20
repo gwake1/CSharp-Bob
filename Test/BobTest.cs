@@ -34,7 +34,6 @@ namespace CSharp_Bob
             Assert.That(Bob.Hey("You are, what, like 15?"), Is.EqualTo("Sure."));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Talking_forcefully()
         {

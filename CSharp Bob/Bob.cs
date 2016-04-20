@@ -12,7 +12,14 @@ namespace CSharp_Bob
             bool hasNumber = msg.Where(c => char.IsDigit(c)).Any();
             if (msg.Contains("!"))
             {
-                return "Whoa, chill out!";
+                if (msg.Contains("Let's"))
+                {
+                    return "Whatever.";
+                }
+                else
+                {
+                    return "Whoa, chill out!";
+                }
             }
             else if (msg.Contains("?")  || hasNumber)
             {
