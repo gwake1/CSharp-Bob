@@ -9,6 +9,10 @@ namespace CSharp_Bob
     {
         public static string Hey(string msg)
         {
+            if (msg.Contains("!"))
+            {
+                return "Whoa, chill out!";
+            }
             return "Whatever.";
         }
     }

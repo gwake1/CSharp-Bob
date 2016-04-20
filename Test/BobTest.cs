@@ -9,8 +9,7 @@ namespace CSharp_Bob
         {
             Assert.That(Bob.Hey("Tom-ay-to, tom-aaaah-to."), Is.EqualTo("Whatever."));
         }
-
-        [Ignore("Remove to run test")]
+        
         [Test]
         public void Shouting()
         {
