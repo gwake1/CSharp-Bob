@@ -76,7 +76,6 @@ namespace CSharp_Bob
             Assert.That(Bob.Hey("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"), Is.EqualTo("Whoa, chill out!"));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Shouting_with_no_exclamation_mark()
         {

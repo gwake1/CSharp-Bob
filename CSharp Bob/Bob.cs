@@ -27,7 +27,7 @@ namespace CSharp_Bob
                 {
                     return "Sure.";
                 }
-                else if(ForceFulQuestion(msg))
+                else if (ForceFulQuestion(msg, hasNumber))
                 {
                     return "Whoa, chill out!";
                 }
@@ -35,11 +35,17 @@ namespace CSharp_Bob
                 {
                     return "Sure.";
                 }
-                
+
             }
-            return "Whatever.";
+            else if (ForceFulQuestion(msg, hasNumber))
+            {
+                return "Whoa, chill out!";
+            }
+            else {
+                return "Whatever.";
+            }
         }
-        public static bool ForceFulQuestion(string msg)
+        public static bool ForceFulQuestion(string msg, bool hasNumber)
         {
             string[] words = msg.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             string jumble = string.Concat(words);
@@ -48,9 +54,13 @@ namespace CSharp_Bob
             {
                 return false;
             }
-            else
+            else if (!hasLower  && !hasNumber)
             {
                 return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }
