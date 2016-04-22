@@ -106,7 +106,6 @@ namespace CSharp_Bob
             Assert.That(Bob.Hey("    "), Is.EqualTo("Fine. Be that way!"));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Multiple_line_question()
         {

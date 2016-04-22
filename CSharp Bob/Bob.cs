@@ -66,20 +66,14 @@ namespace CSharp_Bob
             bool moreText = true;
             if (questionIndex < msg.Length - 1)
             {
-                while (moreText)
+                string iter = split[1];
+                if (iter.Where(c => char.IsLetter(c)).Any())
                 {
-                    for (int i = 1; i < split.Length; i++)
-                    {
-                        string iter = split[i];
-                        if (iter.Where(c => char.IsLetter(c)).Any())
-                        {
-                            moreText = true;
-                        }
-                        else
-                        {
-                            moreText = false;
-                        }
-                    }
+                    moreText = true;
+                }
+                else
+                {
+                    moreText = false;
                 }
                 if (moreText)
                 {
