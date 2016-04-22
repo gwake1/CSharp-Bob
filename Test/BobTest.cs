@@ -94,7 +94,6 @@ namespace CSharp_Bob
             Assert.That(Bob.Hey("Wait! Hang on. Are you going to be OK?"), Is.EqualTo("Sure."));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Silence()
         {

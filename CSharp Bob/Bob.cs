@@ -49,6 +49,10 @@ namespace CSharp_Bob
             {
                 return "Whoa, chill out!";
             }
+            else if (String.IsNullOrEmpty(msg))
+            {
+                return "Fine. Be that way!";
+            }
             else {
                 return "Whatever.";
             }
@@ -97,11 +101,12 @@ namespace CSharp_Bob
             string[] words = msg.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             string jumble = string.Concat(words);
             bool hasLower = jumble.Where(c => char.IsLower(c)).Any();
+            bool isEmpty = String.IsNullOrEmpty(msg);
             if (hasLower)
             {
                 return false;
             }
-            else if (!hasLower  && !hasNumber)
+            else if (!hasLower  && !hasNumber && !isEmpty)
             {
                 return true;
             }
