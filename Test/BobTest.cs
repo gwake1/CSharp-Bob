@@ -88,7 +88,6 @@ namespace CSharp_Bob
             Assert.That(Bob.Hey("Ending with ? means a question."), Is.EqualTo("Whatever."));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Prattling_on()
         {
