@@ -82,7 +82,6 @@ namespace CSharp_Bob
             Assert.That(Bob.Hey("I HATE YOU"), Is.EqualTo("Whoa, chill out!"));
         }
 
-        [Ignore("Remove to run test")]
         [Test]
         public void Statement_containing_question_mark()
         {
